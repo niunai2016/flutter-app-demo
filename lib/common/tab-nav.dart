@@ -13,6 +13,7 @@ class TabNav extends StatefulWidget {
 
 class TabNavState extends State<TabNav> {
   int _tabIndex = 0;
+  var appBarTitles = ['home', 'page1', 'page2', 'page3'];
   final _pageList = [
     new Home(),
     new Page1(),
@@ -26,13 +27,26 @@ class TabNavState extends State<TabNav> {
       body: _pageList[_tabIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('home'), backgroundColor: Colors.blue),
-          BottomNavigationBarItem(icon: Icon(Icons.business), title: Text('page1')),
-          BottomNavigationBarItem(icon: Icon(Icons.school), title: Text('page2')),
-          BottomNavigationBarItem(icon: Icon(Icons.school), title: Text('page3'))
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('home')
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            title: Text('page1')
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.crop_square),
+            title: Text('page2')
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.panorama_fish_eye),
+            title: Text('page3')
+          )
         ],
-        currentIndex: _tabIndex,
+        type: BottomNavigationBarType.fixed,
         fixedColor: Colors.blue,
+        currentIndex: _tabIndex,
         onTap: (index) {
           setState(() {
             _tabIndex = index;

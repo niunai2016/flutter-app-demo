@@ -7,6 +7,8 @@ import 'package:flutter_app_demo/pages/home/home.dart';
 import 'package:flutter_app_demo/pages/page1/page1.dart';
 import 'package:flutter_app_demo/pages/page2/page2.dart';
 import 'package:flutter_app_demo/pages/page3/page3.dart';
+import 'package:flutter_app_demo/pages/list/list.dart';
+import 'package:flutter_app_demo/pages/detail/detail.dart';
 
 class MyAppRouter extends StatelessWidget {
   @override
@@ -22,6 +24,8 @@ class MyAppRouter extends StatelessWidget {
         '/page1': (BuildContext context) => Page1(),
         '/page2': (BuildContext context) => Page2(),
         '/page3': (BuildContext context) => Page3(),
+        '/list': (BuildContext context) => List(),
+        '/detail': (BuildContext context) => Detail(),
       },
     );
   }
