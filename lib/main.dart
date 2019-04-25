@@ -2,7 +2,7 @@
  * App的主程序
  */
 import 'package:flutter/material.dart';
-import 'app-router.dart';
+import 'package:flutter_app_demo/app-router.dart';
 
 void main() => runApp(MyApp());
 
