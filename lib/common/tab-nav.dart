@@ -13,7 +13,6 @@ class TabNav extends StatefulWidget {
 
 class TabNavState extends State<TabNav> {
   int _tabIndex = 0;
-  var appBarTitles = ['home', 'page1', 'page2', 'page3'];
   final _pageList = [
     new Home(),
     new Page1(),
